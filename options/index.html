@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Developer Shortcuts</title>
+    <style type="text/css">
+
+        html, body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-column-gap: 20px;
+        }
+
+        .grid-container-header {
+            display: grid;
+            grid-template-columns: auto auto 64px;
+            grid-column-gap: 20px;
+        }
+
+        svg {
+            margin-top: 4px;
+        }
+
+        ul {
+            padding: 0;
+            overflow-y: auto;
+        }
+
+        p {
+            margin: 0;
+            text-align: center;
+        }
+
+        li {
+            margin: 5px;
+        }
+
+        input {
+            padding: 2px;
+        }
+
+        #listHolder {
+            min-height: 400px;
+            max-height: 400px;
+            overflow-x: auto;
+            overflow-y: scroll;
+            padding-right: 10px;
+        }
+
+        #statusMessage {
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-container-header ">
+    <p class="grid-item center-text">Replace these</p>
+    <p class="grid-item center-text">With these</p>
+</div>
+<div id="listHolder">
+    <ul id="list">
+        <!--Filled with data-->
+    </ul>
+    <input value="Add" id="addButton" type="button" style="margin-left: 5px;"/>
+</div>
+
+<div>
+    <input value="Save" id="saveButton" disabled type="button" style="float: right; margin: 10px;"/>
+    <p id="statusMessage" style="float: right; margin: 10px;  display: none;">Status </p>
+</div>
+<script src=jquery.min.js></script>
+<script src="../constants.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
